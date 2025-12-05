@@ -264,10 +264,6 @@ impl Parser {
         self.previous().clone()
     }
 
-    fn check(&self, kind: &TokenKind) -> bool {
-        std::mem::discriminant(&self.peek().kind) == std::mem::discriminant(kind)
-    }
-
     fn expect_token(&mut self, expected: TokenKind) -> Result<Token, NumerusError> {
         if std::mem::discriminant(&self.peek().kind) == std::mem::discriminant(&expected) {
             Ok(self.advance())
