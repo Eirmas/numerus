@@ -1,6 +1,43 @@
-# Numerus++
+<div align="center">
 
-A Roman-themed mini programming language written in Rust.
+```
+╔═══════════════════════════════════════════════════════════════════╗
+║                                                                   ║
+║   ███╗   ██╗██╗   ██╗███╗   ███╗███████╗██████╗ ██╗   ██╗███████╗ ║
+║   ████╗  ██║██║   ██║████╗ ████║██╔════╝██╔══██╗██║   ██║██╔════╝ ║
+║   ██╔██╗ ██║██║   ██║██╔████╔██║█████╗  ██████╔╝██║   ██║███████╗ ║
+║   ██║╚██╗██║██║   ██║██║╚██╔╝██║██╔══╝  ██╔══██╗██║   ██║╚════██║ ║
+║   ██║ ╚████║╚██████╔╝██║ ╚═╝ ██║███████╗██║  ██║╚██████╔╝███████║ ║
+║   ╚═╝  ╚═══╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝ ║
+║                          ╔══════════════╗                         ║
+║                          ║     + +      ║                         ║
+║                          ╚══════════════╝                         ║
+║                                                                   ║
+║             "Salve, Programmator! Roma Aeterna Est!"              ║
+║                                                                   ║
+║                        Anno Domini MMXXV                          ║
+║                                                                   ║
+╚═══════════════════════════════════════════════════════════════════╝
+```
+
+**A Roman-themed mini programming language written in Rust.**
+
+*Because regular programming languages lack sufficient gravitas.*
+
+</div>
+
+## Why?
+
+Why not? Numerus++ was born from a coding dojo challenge to create something absurd yet functional. It's a fully working interpreter that lets you:
+
+- Declare variables with `DECLARA` and assign with `EST`
+- Do math with `ADDIUS`, `SUBTRAHE`, `MULTIPLICA`, and `DIVIDE`
+- Use Roman numerals (`XLII`) or Arabic numbers (`42`) interchangeably
+- Print output with `SCRIBE` (numbers display as Roman numerals by default)
+- Add dramatic pauses with `AVTEM` (does nothing, but with Roman gravitas)
+- Get real-time syntax highlighting, error diagnostics, and hover documentation in VS Code/Cursor
+
+Is it practical? No. Is it glorious? *GLORIA ROMAE IN PERPETUUM!*
 
 ## Quick Start
 
