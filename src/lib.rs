@@ -8,7 +8,7 @@
 //! DECLARA X EST XV
 //! DECLARA Y EST 10
 //! DECLARA Z EST X ADDIUS Y
-//! SCRIBE("Summa: {Z}")
+//! SCRIBE("Summa: " ADDIUS Z)
 //! ```
 
 pub mod banner;

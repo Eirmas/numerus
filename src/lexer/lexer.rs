@@ -347,7 +347,7 @@ mod tests {
     }
 
     #[test]
-    fn test_string_with_placeholder() {
+    fn test_string_with_braces() {
         let tokens = tokenize(r#""VALOR: {X}""#);
         assert_eq!(tokens, vec![
             TokenKind::StringLiteral("VALOR: {X}".to_string()),
