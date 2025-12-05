@@ -1,0 +1,84 @@
+{
+  "Declare Variable": {
+    "prefix": "decl",
+    "body": "DECLARA ${1:name} EST ${2:value}",
+    "description": "Declare a new variable (DECLARA name EST value)"
+  },
+  "Declare String": {
+    "prefix": "decls",
+    "body": "DECLARA ${1:name} EST \"${2:text}\"",
+    "description": "Declare a string variable"
+  },
+  "Print": {
+    "prefix": "scr",
+    "body": "SCRIBE(${1:expression})",
+    "description": "Print output (SCRIBE)"
+  },
+  "Arabize": {
+    "prefix": "arab",
+    "body": "ARABIZA(${1:number})",
+    "description": "Convert number to Arabic string"
+  },
+  "Print String": {
+    "prefix": "scrs",
+    "body": "SCRIBE(\"${1:text}\")",
+    "description": "Print a string literal"
+  },
+  "Comment": {
+    "prefix": "nota",
+    "body": "NOTA: ${1:comment}",
+    "description": "Add a comment"
+  },
+  "Comment Header": {
+    "prefix": "notah",
+    "body": "NOTA: ═══════════════════════════════════════════════════════════\nNOTA: ${1:SECTION TITLE}\nNOTA: ═══════════════════════════════════════════════════════════",
+    "description": "Add a decorative comment header"
+  },
+  "Addition": {
+    "prefix": "add",
+    "body": "${1:a} ADDIUS ${2:b}",
+    "description": "Addition operation (ADDIUS)"
+  },
+  "Subtraction": {
+    "prefix": "sub",
+    "body": "${1:a} SUBTRAHE ${2:b}",
+    "description": "Subtraction operation (SUBTRAHE)"
+  },
+  "Multiplication": {
+    "prefix": "mul",
+    "body": "${1:a} MULTIPLICA ${2:b}",
+    "description": "Multiplication operation (MULTIPLICA)"
+  },
+  "Division": {
+    "prefix": "div",
+    "body": "${1:a} DIVIDE ${2:b}",
+    "description": "Division operation (DIVIDE)"
+  },
+  "Romanize": {
+    "prefix": "rom",
+    "body": "ROMANIZA(${1:number})",
+    "description": "Convert number to Roman numeral string"
+  },
+  "Avtem": {
+    "prefix": "avt",
+    "body": "AVTEM",
+    "description": "The ceremonial no-op - adds Roman gravitas"
+  },
+  "Program Template": {
+    "prefix": "prog",
+    "body": [
+      "NOTA: ═══════════════════════════════════════════════════════════",
+      "NOTA: ${1:Program Title}",
+      "NOTA: ${2:Description}",
+      "NOTA: ═══════════════════════════════════════════════════════════",
+      "",
+      "DECLARA ${3:result} EST ${4:0}",
+      "",
+      "SCRIBE(${3:result})",
+      "",
+      "NOTA: GLORIA ROMAE IN PERPETUUM!",
+      "AVTEM"
+    ],
+    "description": "Full Numerus++ program template"
+  }
+}

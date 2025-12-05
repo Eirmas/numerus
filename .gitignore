@@ -1,0 +1,7 @@
+/target
+**/node_modules
+.claude
+vscode-numerus/dist/
+vscode-numerus/out/
+vscode-numerus/*.vsix
+vscode-numerus/package-lock.json

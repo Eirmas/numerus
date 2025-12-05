@@ -1,0 +1,78 @@
+NOTA: ═══════════════════════════════════════════════════════════
+NOTA: NUMERUS++ Example Program
+NOTA: Demonstrating strings, concatenation, and Roman numerals
+NOTA: ═══════════════════════════════════════════════════════════
+
+NOTA: Variables can now use lowercase names!
+DECLARA primus EST 15
+DECLARA secundus EST 10
+
+NOTA: Declare with Roman numerals (multi-char)
+DECLARA tertius EST XIV
+DECLARA quartus EST VII
+
+NOTA: String variables
+DECLARA greeting EST "Salve, Munde!"
+DECLARA separator EST "═══════════════════════════════════════"
+
+NOTA: Perform arithmetic operations
+DECLARA summa EST primus ADDIUS secundus
+DECLARA differentia EST primus SUBTRAHE secundus
+DECLARA productum EST tertius MULTIPLICA quartus
+DECLARA quotiens EST productum DIVIDE summa
+
+NOTA: Print strings directly
+SCRIBE(separator)
+SCRIBE("RESULTATA IN NUMERIS ROMANIS:")
+SCRIBE(separator)
+
+NOTA: String concatenation with ADDIUS - numbers display as Roman by default
+SCRIBE("primus ADDIUS secundus = " ADDIUS summa)
+SCRIBE("primus SUBTRAHE secundus = " ADDIUS differentia)
+SCRIBE("tertius MULTIPLICA quartus = " ADDIUS productum)
+SCRIBE("productum DIVIDE summa = " ADDIUS quotiens)
+
+NOTA: Print results in Arabic numerals using ARABIZA function
+SCRIBE("")
+SCRIBE(separator)
+SCRIBE("RESULTATA IN NUMERIS ARABICIS:")
+SCRIBE(separator)
+SCRIBE("primus ADDIUS secundus = " ADDIUS ARABIZA(summa))
+SCRIBE("primus SUBTRAHE secundus = " ADDIUS ARABIZA(differentia))
+SCRIBE("tertius MULTIPLICA quartus = " ADDIUS ARABIZA(productum))
+SCRIBE("productum DIVIDE summa = " ADDIUS ARABIZA(quotiens))
+
+NOTA: Use ROMANIZA to convert numbers to Roman strings
+DECLARA romanValue EST ROMANIZA(42)
+SCRIBE("")
+SCRIBE("ROMANIZA(42) = " ADDIUS romanValue)
+
+NOTA: Use ARABIZA to convert numbers to Arabic strings
+DECLARA arabicValue EST ARABIZA(42)
+SCRIBE("ARABIZA(42) = " ADDIUS arabicValue)
+
+NOTA: Multiple string concatenations
+DECLARA message EST "The answer is: " ADDIUS ARABIZA(42) ADDIUS " (XLII in Roman)"
+SCRIBE(message)
+
+NOTA: Demonstrate operator precedence with numbers
+NOTA: MULTIPLICA and DIVIDE have higher precedence than ADDIUS and SUBTRAHE
+DECLARA precedentia EST 10 ADDIUS 5 MULTIPLICA 2
+SCRIBE("")
+SCRIBE("10 ADDIUS 5 MULTIPLICA 2 = " ADDIUS precedentia)
+SCRIBE("(Evaluated as 10 + (5 * 2) = " ADDIUS ARABIZA(precedentia) ADDIUS ")")
+
+NOTA: With parentheses to override precedence
+DECLARA parenthesis EST (10 ADDIUS 5) MULTIPLICA 2
+SCRIBE("(10 ADDIUS 5) MULTIPLICA 2 = " ADDIUS parenthesis)
+SCRIBE("(Evaluated as (10 + 5) * 2 = " ADDIUS ARABIZA(parenthesis) ADDIUS ")")
+
+NOTA: The ceremonial AVTEM - adds Roman gravitas to your code
+AVTEM
+AVTEM
+AVTEM
+
+SCRIBE("")
+SCRIBE("════════════════════════════════════════")
+SCRIBE("       GLORIA ROMAE IN PERPETUUM!       ")
+SCRIBE("════════════════════════════════════════")

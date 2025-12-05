@@ -1,0 +1,135 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Numerus++",
+  "scopeName": "source.numerus",
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#declarations" },
+    { "include": "#strings" },
+    { "include": "#scribe-keyword" },
+    { "include": "#keywords" },
+    { "include": "#operators" },
+    { "include": "#functions" },
+    { "include": "#arabic-numerals" },
+    { "include": "#declaration-roman-numerals" },
+    { "include": "#variables" },
+    { "include": "#punctuation" }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.nota.numerus",
+          "match": "NOTA:.*$"
+        }
+      ]
+    },
+    "declarations": {
+      "patterns": [
+        {
+          "match": "\\b(DECLARA)\\s+([A-Za-z_][A-Za-z0-9_]*)\\s+(EST)\\b",
+          "captures": {
+            "1": { "name": "keyword.control.declaration.numerus" },
+            "2": { "name": "entity.name.variable.numerus" },
+            "3": { "name": "storage.type.numerus" }
+          }
+        }
+      ]
+    },
+    "declaration-roman-numerals": {
+      "patterns": [
+        {
+          "name": "constant.numeric.roman.numerus",
+          "match": "\\b(M{1,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})|M{0,3}(CM|CD|D?C{1,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})|M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{1,3})(IX|IV|V?I{0,3})|M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{1,3})|IV|IX|XL|XC|CD|CM)\\b"
+        }
+      ]
+    },
+    "scribe-keyword": {
+      "patterns": [
+        {
+          "name": "support.function.print.numerus",
+          "match": "\\b(SCRIBE)\\b"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.numerus",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.numerus",
+              "match": "\\\\."
+            }
+          ]
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.declaration.numerus",
+          "match": "\\b(DECLARA)\\b"
+        },
+        {
+          "name": "storage.type.numerus",
+          "match": "\\b(EST)\\b"
+        },
+        {
+          "name": "keyword.control.avtem.numerus",
+          "match": "\\b(AVTEM)\\b"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "support.function.arithmetic.numerus",
+          "match": "\\b(ADDIUS|SUBTRAHE|MULTIPLICA|DIVIDE)\\b"
+        }
+      ]
+    },
+    "functions": {
+      "patterns": [
+        {
+          "name": "support.function.builtin.numerus",
+          "match": "\\b(ROMANIZA|ARABIZA|EXPRIME)\\b"
+        }
+      ]
+    },
+    "arabic-numerals": {
+      "patterns": [
+        {
+          "name": "constant.numeric.arabic.numerus",
+          "match": "\\b[0-9]+\\b"
+        }
+      ]
+    },
+    "variables": {
+      "patterns": [
+        {
+          "name": "entity.name.variable.numerus",
+          "match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b"
+        }
+      ]
+    },
+    "punctuation": {
+      "patterns": [
+        {
+          "name": "punctuation.parenthesis.open.numerus",
+          "match": "\\("
+        },
+        {
+          "name": "punctuation.parenthesis.close.numerus",
+          "match": "\\)"
+        },
+        {
+          "name": "punctuation.separator.comma.numerus",
+          "match": ","
+        }
+      ]
+    }
+  }
+}

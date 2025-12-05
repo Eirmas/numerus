@@ -1,0 +1,79 @@
+{
+  "name": "numerus-addiusaddius",
+  "displayName": "Numerus++",
+  "description": "Syntax highlighting and diagnostics for the Numerus++ Roman-themed programming language",
+  "version": "0.4.4",
+  "publisher": "aritma",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Linters"
+  ],
+  "keywords": [
+    "numerus",
+    "roman",
+    "latin",
+    "programming language"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "numerus",
+        "aliases": [
+          "Numerus++",
+          "numerus"
+        ],
+        "extensions": [
+          ".npp"
+        ],
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "./icons/numerus-light.png",
+          "dark": "./icons/numerus-dark.png"
+        }
+      }
+    ],
+    "grammars": [
+      {
+        "language": "numerus",
+        "scopeName": "source.numerus",
+        "path": "./syntaxes/numerus.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "numerus",
+        "path": "./snippets/numerus.json"
+      }
+    ],
+    "configuration": {
+      "title": "Numerus++",
+      "properties": {
+        "numerus.executablePath": {
+          "type": "string",
+          "default": "",
+          "description": "Path to the numerus executable. Leave empty to auto-detect."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "build": "node esbuild.js",
+    "build:prod": "node esbuild.js --production",
+    "vscode:prepublish": "npm run build:prod"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/vscode": "^1.60.0",
+    "esbuild": "^0.27.1",
+    "typescript": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aritma/numerus-addiusaddius"
+  },
+  "license": "MIT"
+}
